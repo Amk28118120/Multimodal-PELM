@@ -41,7 +41,6 @@ Testing
 Result storage
 
 3) pelm_core.py  
-
 Contains the core PELM implementation:   
 
 Phase encoding    
@@ -51,7 +50,8 @@ Feature normalization
 Ridge regression solver  
 Evaluation functions  
 
-4) Config.py  
+4) Config.py
+   
 Update the configuration file before running experiments.  
 
 Typical settings include:  
