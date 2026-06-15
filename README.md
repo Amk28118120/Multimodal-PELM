@@ -102,7 +102,7 @@ Distance-separation statistics
 4. Make appropriate changes in config.py     
 5. Run main.py
    → Generate optical features         
-6. Save features as NPZ    
+6. Save features as NPZ , can also compare with the NPZ files given
 7. Run lambda_cv.py       
    → Find best λ     
 8. Run kernel.py
