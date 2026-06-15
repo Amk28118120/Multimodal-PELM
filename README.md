@@ -1,6 +1,6 @@
 Paper drive link -https://drive.google.com/file/d/1qBtAQ_IFrtfCs1o31qVBEVgVMR9AKuN6/view?usp=sharing  
 
-npz files drive link - https://drive.google.com/drive/folders/15WQ4clja7MEvxCUGoy_Oq0b7v5QBxdXE?usp=sharing    
+NPZ files drive link  - https://drive.google.com/drive/folders/15WQ4clja7MEvxCUGoy_Oq0b7v5QBxdXE?usp=sharing    
 
 
 
@@ -31,25 +31,25 @@ Run the optical verification routine first to ensure - Camera is detected, SLM i
 For hardware details and alignment guidelines, see the paper.
 
 2) main.py  
-Main experiment runner.
-Handles:
-Dataset loading,
-,Optical feature extraction
-,Ridge regression training
-,Cross-validation
-,Testing
-,Result storage
+Main experiment runner.  
+Handles:  
+Dataset loading  
+Optical feature extraction  
+Ridge regression training  
+Cross-validation         
+Testing  
+Result storage
 
-3)pelm_core.py  
+3) pelm_core.py  
 
-Contains the core PELM implementation:
+Contains the core PELM implementation:   
 
-Phase encoding
-,Noise embedding
-,Fourier embedding
-,Feature normalization
-,Ridge regression solver
-,Evaluation functions
+Phase encoding    
+Noise embedding  
+Fourier embedding  
+Feature normalization  
+Ridge regression solver  
+Evaluation functions  
 
 4) Config.py  
 Update the configuration file before running experiments.  
@@ -69,60 +69,60 @@ Cross-validation settings
 Ridge parameter sweep range  
 
 5) kernel.py  
-Maps the empirical optical kernel to several theoretical kernels:
+Maps the empirical optical kernel to several theoretical kernels:  
 
-Angular RBF Kernel
-,Phase Kernel
-,Gaussian Kernel
-,Arc-Cosine Kernel (K1)
-,Arc-Cosine Kernel (K2)
+Angular RBF Kernel  
+Phase Kernel  
+Gaussian Kernel  
+Arc-Cosine Kernel (K1)  
+Arc-Cosine Kernel (K2)  
 
-Produces:
-Kernel fit plots
-,Pearson correlation
-,RMSE statistics
+Produces:  
+Kernel fit plots  
+Pearson correlation  
+RMSE statistics
 
 6) analysis_2.py
 
 Generates:  
 
 CKA Analysis
-,Linear CKA
-,RBF CKA
-,Accuracy Comparisons
-,Linear vs RBF kernel alignment
-,Accuracy vs CKA
-,Kernel Heatmaps
-,Empirical kernel matrices
-,Ideal label kernels
-,Centered kernel products
+Linear CKA   
+RBF CKA  
+Accuracy Comparisons   
+Linear vs RBF kernel alignment  
+Accuracy vs CKA  
+,Kernel Heatmaps  
+,Empirical kernel matrices  
+,Ideal label kernels  
+,Centered kernel products  
 
-7) isometry.py
+7) isometry.py  
 
-Evaluates geometric preservation of the optical feature map.  
+Evaluates geometric preservation of the optical feature map.    
 
-Generates:  
+Generates:    
 
-Distance preservation scatter plots
-,Pearson correlation
-,Spearman correlation
-,Distance-separation statistics
+Distance preservation scatter plots   
+Pearson correlation   
+Spearman correlation     
+Distance-separation statistics   
 
 Recommended execution order:  
 
-1. Optical system setup
-2. Setup the SLM using configuration manager and follow all the details mentioned in the manual
-3. Add appropriate DLLs in the folders mentioned
-4. Make appropriate changes in config.py 
+1. Optical system setup   
+2. Setup the SLM using configuration manager and follow all the details mentioned in the manual    
+3. Add appropriate DLLs in the folders mentioned   
+4. Make appropriate changes in config.py     
 5. Run main.py
-   → Generate optical features  
-6. Save features as NPZ  
-7. Run lambda_cv.py
-   → Find best λ  
+   → Generate optical features         
+6. Save features as NPZ    
+7. Run lambda_cv.py       
+   → Find best λ     
 8. Run kernel.py
-   → Kernel characterization  
-9. Run analysis_2.py
-   → CKA + kernel heatmaps  
-10. Run isometry.py
-   → Distance preservation analysis  
+   → Kernel characterization     
+9. Run analysis_2.py    
+   → CKA + kernel heatmaps      
+10. Run isometry.py     
+   → Distance preservation analysis      
 
