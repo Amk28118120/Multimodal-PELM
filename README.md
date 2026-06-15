@@ -3,8 +3,9 @@
 Paper drive link -https://drive.google.com/file/d/1qBtAQ_IFrtfCs1o31qVBEVgVMR9AKuN6/view?usp=sharing  
 
 NPZ files drive link  - https://drive.google.com/drive/folders/15WQ4clja7MEvxCUGoy_Oq0b7v5QBxdXE?usp=sharing    
+These `.npz` files contain the extracted optical features after SLM encoding, free-space propagation, camera acquisition, and feature preprocessing.
 
-
+Users without access to the optical hardware can directly use these files to reproduce the results 
 
 ## Repository Workflow  
 The repository is organized into five major stages:  
@@ -81,10 +82,10 @@ RBF CKA
 Accuracy Comparisons   
 Linear vs RBF kernel alignment  
 Accuracy vs CKA  
-,Kernel Heatmaps  
-,Empirical kernel matrices  
-,Ideal label kernels  
-,Centered kernel products  
+Kernel Heatmaps  
+Empirical kernel matrices  
+Ideal label kernels  
+Centered kernel products  
 
 ### 7) isometry.py  
 Evaluates geometric preservation of the optical feature map.    
