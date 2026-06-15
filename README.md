@@ -1,10 +1,12 @@
+#Multimodal Optical Feature Extraction with a Free-Space Photonic Extreme Learning Machine
+
 Paper drive link -https://drive.google.com/file/d/1qBtAQ_IFrtfCs1o31qVBEVgVMR9AKuN6/view?usp=sharing  
 
 NPZ files drive link  - https://drive.google.com/drive/folders/15WQ4clja7MEvxCUGoy_Oq0b7v5QBxdXE?usp=sharing    
 
 
 
-Repository Workflow  
+##Repository Workflow  
 The repository is organized into five major stages:  
 
 1) Optical system setup and verification  
@@ -15,9 +17,9 @@ The repository is organized into five major stages:
 
 For detailed experimental methodology and hardware specifications, please refer to the paper.  
 
-Files and there functions  
+##Files and their functions  
 
-1) optical_driver.py  
+###1) optical_driver.py  
 Responsible for:  
 Camera initialization  
 SLM communication  
@@ -30,7 +32,7 @@ Run the optical verification routine first to ensure - Camera is detected, SLM i
 
 For hardware details and alignment guidelines, see the paper.
 
-2) main.py  
+###2) main.py   
 Main experiment runner.  
 Handles:  
 Dataset loading  
@@ -40,9 +42,8 @@ Cross-validation
 Testing  
 Result storage
 
-3) pelm_core.py  
+###3) pelm_core.py  
 Contains the core PELM implementation:   
-
 Phase encoding    
 Noise embedding  
 Fourier embedding  
@@ -50,42 +51,30 @@ Feature normalization
 Ridge regression solver  
 Evaluation functions  
 
-4) Config.py
+###4) Config.py
    
 Update the configuration file before running experiments.  
-
 Typical settings include:  
-
-Dataset selection  
-MNIST  
-FSDD  
-Mushroom  
-Abalone  
-Embedding type  
-Noise Embedding  
-Fourier Embedding  
+Dataset selection  - MNIST, FSDD, Mushroom, Abalone  
+Embedding type  - Noise Embedding, Fourier Embedding  
 Number of samples  
 Cross-validation settings  
 Ridge parameter sweep range  
 
-5) kernel.py  
+###5) kernel.py  
 Maps the empirical optical kernel to several theoretical kernels:  
-
 Angular RBF Kernel  
 Phase Kernel  
 Gaussian Kernel  
 Arc-Cosine Kernel (K1)  
 Arc-Cosine Kernel (K2)  
-
 Produces:  
 Kernel fit plots  
 Pearson correlation  
 RMSE statistics
 
-6) analysis_2.py
-
+###6) analysis_2.py
 Generates:  
-
 CKA Analysis
 Linear CKA   
 RBF CKA  
@@ -97,18 +86,15 @@ Accuracy vs CKA
 ,Ideal label kernels  
 ,Centered kernel products  
 
-7) isometry.py  
-
+###7) isometry.py  
 Evaluates geometric preservation of the optical feature map.    
-
 Generates:    
-
 Distance preservation scatter plots   
 Pearson correlation   
 Spearman correlation     
 Distance-separation statistics   
 
-Recommended execution order:  
+##Recommended execution order:  
 
 1. Optical system setup   
 2. Setup the SLM using configuration manager and follow all the details mentioned in the manual    
